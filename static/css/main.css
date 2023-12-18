@@ -1,0 +1,101 @@
+/* Masquer la barre de défilement horizontale, mais la garder invisible */
+.product-container, .product-container-promo {
+	overflow-x: scroll;
+	/* Afficher la barre de défilement horizontale */
+	scrollbar-width: thin;
+	/* Largeur de la barre de défilement */
+	scrollbar-color: transparent transparent;
+	/* Couleur de la barre de défilement */
+}
+
+/* Personnaliser la barre de défilement pour la rendre invisible */
+.product-container::-webkit-scrollbar, .product-container-promo::-webkit-scrollbar {
+	width: 8px;
+	/* Largeur de la barre de défilement */
+}
+
+.product-container::-webkit-scrollbar-thumb, .product-container-promo::-webkit-scrollbar-thumb {
+	background-color: transparent;
+	/* Couleur du curseur de la barre de défilement */
+}
+
+.product-container::-webkit-scrollbar-track, .product-container-promo::-webkit-scrollbar-track {
+	background-color: transparent;
+	/* Couleur de la piste de la barre de défilement */
+}
+
+
+@keyframes slide-in {
+	from {
+		transform: translateX(100px);
+		/* Déplacer le lien hors de la vue à droite */
+	}
+
+	to {
+		transform: translateX(0);
+		/* Position fixe à droite */
+	}
+}
+
+@keyframes slide-out {
+	from {
+		transform: translateX(0);
+		/* Position fixe à droite */
+	}
+
+	to {
+		transform: translateX(100px);
+		/* Déplacer le lien hors de la vue à droite */
+	}
+}
+
+
+.grayscale-img {
+	width: 100px;
+	filter: grayscale(100%);
+	/* Transforme l'image en noir et blanc */
+	transition: filter 0.3s ease;
+	/* Transition fluide de l'effet noir et blanc au couleur */
+}
+
+.grayscale-img:hover {
+	filter: grayscale(0%);
+	/* Passe l'image en couleur au survol */
+}
+
+/* review-background-image */
+.review-background-image::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	/* Couleur d'arrière-plan semi-transparente */
+	z-index: -1;
+	/* Placez cette pseudo-classe derrière le contenu */
+}
+
+.product-description {
+	height: 150px;
+}
+
+.contact-form{
+	border: 0;
+	border-bottom: 2px solid #0d6efd;
+}
+
+.contact-form:focus{
+	border-bottom: 4px solid #ff4f81;
+}
+
+/* Style pour les cases cochées */
+.green-radio:checked {
+	background-color: green; /* Couleur de fond verte pour les cases cochées */
+	border: green;
+	box-shadow: green 10px 10px;
+}
+/* Style pour les cases non cochées */
+.green-radio:not(:checked) {
+	background-color: initial; /* Réinitialise la couleur de fond pour les cases non cochées */
+}

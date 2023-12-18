@@ -1,0 +1,53 @@
+.text-bold {
+    font-weight: bold;
+}
+
+.bg-pink {
+    background: #ff4f81;
+}
+
+.text-pink {
+    color: #ff4f81;
+}
+
+.btn-pink {
+    background: #ff4f81;
+    color: #fff;
+}
+
+.btn-pink:hover {
+    background: #df4873;
+    color: #fff;
+}
+
+.btn-outline-pink {
+    border: #df4873 solid 1px;
+    color: #df4873;
+}
+
+.btn-outline-pink:hover {
+    background: #df4873;
+    color: black;
+}
+.btn-gradient{
+    background: linear-gradient(-45deg, #ff4f81, #0d6efd);
+    color: #fff;
+}
+.btn-gradient:hover{
+    background: linear-gradient(-45deg, #0d6efd, #ff4f81);
+    color: #fff;
+}
+.btn:focus {
+    box-shadow: none;
+    border: none;
+}
+
+.underline {
+    height: 3px;
+    width: 100px;
+    background: linear-gradient(-45deg, #ff4f81, #0d6efd);
+}
+/* 
+.banner {
+    background: url('../images/fond.jpg') center cover;
+} */
